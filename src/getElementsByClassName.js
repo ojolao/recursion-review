@@ -7,14 +7,14 @@
 var getElementsByClassName = function(className) {
   var result = [];
   var traverseTree = function(node) {
-    if(node.classList !== undefined){
+    if(node.classList !== undefined) {
       for(var i = 0; i < node.classList.length; i++) {
-        if(node.classList[i] === className){
+        if(node.classList[i] === className) {
           result.push(node);
         }
       }
     }
-    if(node.childNodes.length !== 0){
+    if(node.childNodes.length !== 0) {
       for (var i = 0; i < node.childNodes.length; i++) {
         traverseTree(node.childNodes[i]);
       }
